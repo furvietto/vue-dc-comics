@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 main {
+    position: relative;
+    z-index: 2;
     .content {
     height: 10vh;
     background-color: black;
@@ -68,6 +70,7 @@ main {
                 height: 100%;
                 font-size: 0.7em;
                         li{
+                            cursor: pointer;
                             img {
                             margin-right: 10px;
                             width: 45px;
