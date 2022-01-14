@@ -2,7 +2,7 @@
     <main>
         <div class="content">
             <div class="container">
-                <h1>--> Content goes here </h1>
+                
             </div>
         </div>
         <div class="navPage">
