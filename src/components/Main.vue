@@ -3,12 +3,11 @@
         <div class="content">
             <div class="container">
                 <ul>
-                    <li v-for="(comic, index) in comics" :key="index">
-                        <div class="square">
-                            <img :src="comic.thumb" alt="">
-                        </div>
-                        <h4>{{comic.series}}</h4>
-                    </li>
+                    <Products 
+                    v-for="(comic, index) in comics" :key="index"
+                    :img="comic.thumb"
+                    :series="comic.series"
+                    />
                 </ul>
                 <div class="load-more">
                     <button>LOAD MORE</button>
@@ -46,8 +45,13 @@
 </template>
 
 <script>
+import Products from './Products.vue';
+
 export default {
     name: "Main",
+    components: {
+        Products
+    },
     data() {
         return {
             comics : [
