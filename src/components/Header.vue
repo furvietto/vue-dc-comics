@@ -15,6 +15,11 @@
               <li>SHOP</li>
           </ul>
       </div>
+      <div class="jumbotron">
+          <div class="current-series">
+              <h1>CURRENT SERIES</h1>
+          </div>
+      </div>
   </header>
 </template>
 
@@ -55,5 +60,21 @@ export default {
                   }
                 }
         }
+}
+
+.jumbotron {
+    height: 40vh;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover ;
+    position: relative;
+    .current-series {
+        position: absolute;
+        bottom: -12px;
+        left: 220px;
+        padding: 10px;
+        color: white;
+        background-color: blue;
+        z-index: 3;
+    }
 }
 </style>
