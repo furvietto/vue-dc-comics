@@ -155,23 +155,7 @@ main {
         flex-wrap: wrap;
         align-items: center;
         padding: 30px 0;
-        li {
-            margin: 20px;
-            
-            font-size: 0.6em;
-            width: calc(100% / 6 - 40px);
-            height: 130px;
-            cursor: pointer;
-            .square {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                img{
-                width: 100%;
-            }
-            }
-            
-        }
+             
      }
     
     }
