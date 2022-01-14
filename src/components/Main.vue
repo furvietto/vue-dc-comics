@@ -4,9 +4,15 @@
             <div class="container">
                 <ul>
                     <li v-for="(comic, index) in comics" :key="index">
-                        <img :src="comic.thumb" alt="">
+                        <div class="square">
+                            <img :src="comic.thumb" alt="">
+                        </div>
+                        <h4>{{comic.series}}</h4>
                     </li>
                 </ul>
+                <div class="load-more">
+                    <button>LOAD MORE</button>
+                </div>
             </div>
         </div>
         <div class="navPage">
@@ -129,13 +135,38 @@ main {
     z-index: 2;
     .content {
     background-color: black;
+    color: white;
+    .load-more {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+        button{
+            background-color: blue;
+            padding: 8px 40px;
+            color: white;
+        }
+    }
      ul {
          display: flex;
         flex-wrap: wrap;
         align-items: center;
+        padding: 30px 0;
         li {
             margin: 20px;
-            width: calc((100% / 6) - 40px);
+            
+            font-size: 0.6em;
+            width: calc(100% / 6 - 40px);
+            height: 130px;
+            cursor: pointer;
+            .square {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                img{
+                width: 100%;
+            }
+            }
+            
         }
      }
     
