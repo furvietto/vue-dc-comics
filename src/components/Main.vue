@@ -17,26 +17,12 @@
         <div class="navPage">
             <div class="container">
                 <ul>
-                    <li>
-                        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-                        DIGITAL COMICS
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-                        DC MERCHANDISE
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-                        SUBSCRIPTIONS
-                    </li>
-                    <li>
-                        <img id="small" src="../assets/img/buy-comics-shop-locator.png" alt="">
-                        COMIC SHOP LOCATOR
-                    </li>
-                    <li>
-                        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                        DC POWER VISA
-                    </li>
+                    <Icon 
+                    v-for="(icon, index) in icons" :key="index"
+                    :src="icon.img"
+                    :text="icon.text"
+                    :small="icon.small"
+                    />
                     
                 </ul>
             </div>
@@ -46,14 +32,40 @@
 
 <script>
 import Products from './Products.vue';
+import Icon from './Icon.vue';
 
 export default {
     name: "Main",
     components: {
-        Products
+        Products,
+        Icon,
     },
     data() {
         return {
+            icons : [
+                {
+                    img : require("../assets/img/buy-comics-digital-comics.png"),
+                    text : "DIGITAL COMICS"
+                },
+                {
+                    img :require("../assets/img/buy-comics-merchandise.png"),
+                    text : "DC MERCHANDISE"
+                },
+                {
+                    img : require("../assets/img/buy-comics-subscriptions.png"),
+                    text : "SUBSCRIPTIONS"
+                },
+                {
+                    img :require("../assets/img/buy-comics-shop-locator.png"),
+                    text : "COMIC SHOP LOCATOR",
+                    small : "small"
+                },
+                {
+                    img : require("../assets/img/buy-dc-power-visa.svg"),
+                    text : "DC POWER VISA"
+                },
+            ],
+
             comics : [
             {
                 "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -171,20 +183,7 @@ main {
                 align-items: center;
                 height: 100%;
                 font-size: 0.7em;
-                        li{
-                            cursor: pointer;
-                            img {
-                            margin-right: 10px;
-                            width: 45px;
-                            vertical-align: middle;
-                            } 
-
-                            #small{
-                                width: 35px;
-                            }
-                        } 
-                    
-                
+                        
         }
         }
         

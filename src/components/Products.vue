@@ -15,21 +15,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   li {
-            margin: 20px;
-            
-            font-size: 0.6em;
-            width: calc(100% / 6 - 40px);
-            height: 130px;
-            cursor: pointer;
-            .square {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                img{
-                width: 100%;
-            }
-            }
-            
-        }
+  @import "./../assets/scss/partials/_product.scss"
 </style>

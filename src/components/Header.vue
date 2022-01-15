@@ -35,6 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./../assets/scss/partials/_variables.scss";
 .container {
     height: 10vh;
     font-size: 0.7em;
@@ -55,8 +56,8 @@ export default {
                   &:hover,
                   &:active,
                   &.active{
-                      color: blue;
-                      border-bottom: 2px solid blue;
+                      color: $c-blue;
+                      border-bottom: 2px solid $c-blue;
                   }
                 }
         }
@@ -73,7 +74,7 @@ export default {
         left: 220px;
         padding: 10px;
         color: white;
-        background-color: blue;
+        background-color: $c-blue;
         z-index: 3;
     }
 }
